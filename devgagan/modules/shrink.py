@@ -74,7 +74,33 @@ async def token_handler(client, message):
     user_id = message.chat.id
     if len(message.command) <= 1:
         image_url = "https://i.postimg.cc/7LdgvpL4/IMG-20250217-073807.jpg"
-#        join_button = InlineKeyboardButton("Join Channel", url="https://t.me/team_spy_pro")
+#        join_but@app.on_message(filters.command("start"))
+async def token_handler(client, message):
+    """Handle the /token command."""
+    join = await subscribe(client, message)
+    if join == 1:
+        return
+    chat_id = "save_restricted_content_bots"
+    msg = await app.get_messages(chat_id, 796)
+    user_id = message.chat.id
+    if len(message.command) <= 1:
+        image_url = "https://i.postimg.cc/v8q8kGyz/startimg-1.jpg"
+        premium = InlineKeyboardButton("Get Premium", url="https://t.me/kingofpatal")   
+        keyboard = InlineKeyboardMarkup([
+            [premium]    
+        ])
+         
+        await message.reply_photo(
+            msg.photo.file_id,
+            caption=(
+                "Hi 👋 Welcome, Wanna intro...?\n\n"
+                "✳️ I can save posts from channels or groups where forwarding is off. I can download videos/audio from YT, INSTA, ... social platforms\n"
+                "✳️ Simply send the post link of a public channel. For private channels, do /login. Send /help to know more."
+            ),
+            reply_markup=keyboard
+        )
+        return
+     ton = InlineKeyboardButton("Join Channel", url="https://t.me/team_spy_pro")
         premium = InlineKeyboardButton("Get Premium", url="https://t.me/satya_sanatanii")   
         keyboard = InlineKeyboardMarkup([
             [join_button],   
