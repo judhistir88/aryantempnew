@@ -201,7 +201,7 @@ async def get_msg(userbot, sender, edit_id, msg_link, i, message):
             if chat in saved_channel_ids:
                 await app.edit_message_text(
                     message.chat.id, edit_id,
-                    "Sorry! This channel is protected by **__Team SPY__**."
+                    "Sorry! This channel is protected by **__Aryan__**."
                 )
                 return
             
@@ -593,7 +593,7 @@ async def send_settings_message(chat_id, user_id):
         [Button.inline("Set Thumbnail", b'setthumb'), Button.inline("Remove Thumbnail", b'remthumb')],
         [Button.inline("PDF Wtmrk", b'pdfwt'), Button.inline("Video Wtmrk", b'watermark')],
         [Button.inline("Upload Method", b'uploadmethod')],  # Include the dynamic Fast DL button
-        [Button.url("Report Errors", "https://t.me/team_spy_pro")]
+        [Button.url("Report Errors", "https://t.me/satya_sanatanii")]
     ]
 
     await gf.send_file(
@@ -647,7 +647,7 @@ async def callback_query_handler(event):
         await event.respond('Please send the photo you want to set as the thumbnail.')
     
     elif event.data == b'pdfwt':
-        await event.respond("Watermark is Pro+ Plan.. contact @kingofpatal")
+        await event.respond("Watermark is Pro+ Plan.. contact @satya_sanatanii")
         return
 
     elif event.data == b'uploadmethod':
@@ -871,7 +871,7 @@ async def handle_large_file(file, sender, edit, caption):
         if freecheck == 1:
             reply_markup = InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/kingofpatal")]
+                    [InlineKeyboardButton("💎 Get Premium to Forward", url="https://t.me/satya_sanatanii")]
                 ]
             )
             await app.copy_message(
@@ -968,7 +968,7 @@ def progress_callback(done, total, user_id):
     # Format the progress bar
     completed_blocks = int(percent // 10)
     remaining_blocks = 10 - completed_blocks
-    progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+    progress_bar = "🟢" * completed_blocks + "🔥" * remaining_blocks
     
     # Convert done and total to MB for easier reading
     done_mb = done / (1024 * 1024)  # Convert bytes to MB
@@ -1004,7 +1004,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__Powered by Aryan__**"
     )
     
     # Update tracking variables for the user
@@ -1031,7 +1031,7 @@ def dl_progress_callback(done, total, user_id):
     # Format the progress bar
     completed_blocks = int(percent // 10)
     remaining_blocks = 10 - completed_blocks
-    progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+    progress_bar = "🟢" * completed_blocks + "🔥" * remaining_blocks
     
     # Convert done and total to MB for easier reading
     done_mb = done / (1024 * 1024)  # Convert bytes to MB
@@ -1067,7 +1067,7 @@ def dl_progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__ETA:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__Powered by Aryan__**"
     )
     
     # Update tracking variables for the user
