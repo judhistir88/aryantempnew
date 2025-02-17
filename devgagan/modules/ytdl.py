@@ -121,8 +121,8 @@ async def process_audio(client, event, url, cookies_env_var=None):
                 except Exception:
                     pass
                 audio_file.tags["TIT2"] = TIT2(encoding=3, text=title)
-                audio_file.tags["TPE1"] = TPE1(encoding=3, text="Team SPY")
-                audio_file.tags["COMM"] = COMM(encoding=3, lang="eng", desc="Comment", text="Processed by Team SPY")
+                audio_file.tags["TPE1"] = TPE1(encoding=3, text="Aryan")
+                audio_file.tags["COMM"] = COMM(encoding=3, lang="eng", desc="Comment", text="Processed by Aryan")
  
                 thumbnail_url = info_dict.get('thumbnail')
                 if thumbnail_url:
@@ -268,7 +268,7 @@ def progress_callback(done, total, user_id):
      
     completed_blocks = int(percent // 10)
     remaining_blocks = 10 - completed_blocks
-    progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+    progress_bar = "🟢" * completed_blocks + "🔥" * remaining_blocks
  
      
     done_mb = done / (1024 * 1024)   
@@ -304,7 +304,7 @@ def progress_callback(done, total, user_id):
         f"│ **__Speed:__** {speed_mbps:.2f} Mbps\n"
         f"│ **__Time Remaining:__** {remaining_time_min:.2f} min\n"
         f"╰──────────────────╯\n\n"
-        f"**__Powered by Team SPY__**"
+        f"**__Powered by Aryan__**"
     )
  
      
@@ -355,7 +355,7 @@ async def process_video(client, event, url, cookies_env_var, check_duration_and_
             return
          
         await asyncio.to_thread(download_video, url, ydl_opts)
-        title = info_dict.get('title', 'Powered by Team SPY')
+        title = info_dict.get('title', 'Powered by Aryan')
         k = video_metadata(download_path)      
         W = k['width']
         H = k['height']
