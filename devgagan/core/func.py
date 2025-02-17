@@ -104,8 +104,8 @@ async def progress_bar(current, total, ud_type, message, start):
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)
 
         progress = "{0}{1}".format(
-            ''.join(["♦" for i in range(math.floor(percentage / 10))]),
-            ''.join(["◇" for i in range(10 - math.floor(percentage / 10))]))
+            ''.join(["🟢" for i in range(math.floor(percentage / 10))]),
+            ''.join(["🔥" for i in range(10 - math.floor(percentage / 10))]))
 
         tmp = progress + PROGRESS_BAR.format( 
             round(percentage, 2),
@@ -239,7 +239,7 @@ async def progress_callback(current, total, progress_message):
     if current_time - last_update_time >= 10 or percent % 10 == 0:
         completed_blocks = int(percent // 10)
         remaining_blocks = 10 - completed_blocks
-        progress_bar = "♦" * completed_blocks + "◇" * remaining_blocks
+        progress_bar = "🟢" * completed_blocks + "🔥" * remaining_blocks
         current_mb = current / (1024 * 1024)  
         total_mb = total / (1024 * 1024)      
         await progress_message.edit(
@@ -250,7 +250,7 @@ async def progress_callback(current, total, progress_message):
     f"│ **__Progress:__** {percent:.2f}%\n"
     f"│ **__Uploaded:__** {current_mb:.2f} MB / {total_mb:.2f} MB\n"
     f"╰──────────────────╯\n\n"
-    f"**__Powered by Team SPY__**"
+    f"**__Powered by Aryan__**"
         )
 
         last_update_time = current_time
