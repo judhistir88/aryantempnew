@@ -100,10 +100,10 @@ async def token_handler(client, message):
             reply_markup=keyboard
         )
         return
-     ton = InlineKeyboardButton("Join Channel", url="https://t.me/team_spy_pro")
+#       join = InlineKeyboardButton("Join Channel", url="https://t.me/team_spy_pro")
         premium = InlineKeyboardButton("Get Premium", url="https://t.me/satya_sanatanii")   
         keyboard = InlineKeyboardMarkup([
-            [join_button],   
+#           [join_button],   
             [premium]    
         ])
          
