@@ -74,7 +74,7 @@ async def token_handler(client, message):
     user_id = message.chat.id
     if len(message.command) <= 1:
         image_url = "https://i.postimg.cc/7LdgvpL4/IMG-20250217-073807.jpg"
-#        join_but@app.on_message(filters.command("start"))
+#       join_but@app.on_message(filters.command("start"))
 async def token_handler(client, message):
     """Handle the /token command."""
     join = await subscribe(client, message)
@@ -84,8 +84,8 @@ async def token_handler(client, message):
     msg = await app.get_messages(chat_id, 796)
     user_id = message.chat.id
     if len(message.command) <= 1:
-        image_url = "https://i.postimg.cc/v8q8kGyz/startimg-1.jpg"
-        premium = InlineKeyboardButton("Get Premium", url="https://t.me/kingofpatal")   
+        image_url = "https://i.postimg.cc/7LdgvpL4/IMG-20250217-073807.jpg"
+        premium = InlineKeyboardButton("Get Premium", url="https://t.me/satya_sanatanii")   
         keyboard = InlineKeyboardMarkup([
             [premium]    
         ])
